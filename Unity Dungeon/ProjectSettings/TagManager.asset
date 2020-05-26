@@ -38,6 +38,18 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: booboocam
+    uniqueID: 746915783
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Collision
+    uniqueID: 908807503
+    locked: 0
+  - name: BadGuy1
+    uniqueID: 200117511
+    locked: 0
+  - name: Player
+    uniqueID: 4075152185
     locked: 0

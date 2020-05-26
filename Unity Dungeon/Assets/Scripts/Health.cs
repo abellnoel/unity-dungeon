@@ -6,12 +6,12 @@ public class Health : MonoBehaviour
 {
 
     const int DEFAULT_HP = 20;
-    int health;
+    public int health;
 
     // Start is called before the first frame update
     void Start()
     {
-        health = DEFAULT_HP;
+        //health = DEFAULT_HP;
     }
 
     // Update is called once per frame
@@ -19,8 +19,8 @@ public class Health : MonoBehaviour
     {
         
     }
-
+    
     public int getHealth(){
-        return health;
+        return health; 
     }
 }
