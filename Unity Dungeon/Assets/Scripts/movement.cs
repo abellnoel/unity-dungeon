@@ -23,5 +23,8 @@ public class movement : MonoBehaviour
         //multiply by fixedDeltaTime for more consistency
         rb.MovePosition(rb.position + move * moveSpeed * Time.fixedDeltaTime); //Vector2 supports multiplacation by floats but not doubles 
     }
+    private void OnTriggerEnter2D(Collider2D collider) {
+        Debug.Log("Worked");
+    }
 }
 
