@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class RoomMove : MonoBehaviour
 {
@@ -16,6 +17,11 @@ public class RoomMove : MonoBehaviour
     public Vector2 cameraChange;
     public Vector3 playerChange;
     private CameraMovement cam;
+
+    public bool needText; //Not every room needs a title card
+    public string placeName;
+    public GameObject text;
+    public Text placeText;
     // Start is called before the first frame update
     void Start()
     {
@@ -33,6 +39,15 @@ public class RoomMove : MonoBehaviour
             cam.minPosition += cameraChange;
             cam.maxPosition += cameraChange;
             other.transform.position += playerChange; //Moving the player where they need to be
+            if(needText){
+                StartCoroutine(placeNameCo()); //Not sure how this works
+            }
         }
     }
+    private IEnumerator placeNameCo(){ //IEnumerator allows you to have a specified wait time
+        text.SetActive(true);//Text on screen
+        placeText.text = placeName; //Title
+        yield return new WaitForSeconds(4f); //text Waits a bit before leaving
+        text.SetActive(false); //The text is no longer on screen
+    } 
 }
