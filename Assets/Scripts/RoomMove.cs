@@ -47,7 +47,7 @@ public class RoomMove : MonoBehaviour
     private IEnumerator placeNameCo(){ //IEnumerator allows you to have a specified wait time
         text.SetActive(true);//Text on screen
         placeText.text = placeName; //Title
-        yield return new WaitForSeconds(4f); //text Waits a bit before leaving
+        yield return new WaitForSeconds(2f); //text Waits a bit before leaving
         text.SetActive(false); //The text is no longer on screen
     } 
 }
