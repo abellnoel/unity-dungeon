@@ -10,7 +10,11 @@ public class movement : MonoBehaviour
     public Animator animator;
     private Vector2 move;
     private float lastDirection = 1;
+    public VectorValue startingPosition;
 
+    void Start() {
+        transform.position = startingPosition.initialValue;
+    }
     // Update is called once per frame
     void Update()
     {   

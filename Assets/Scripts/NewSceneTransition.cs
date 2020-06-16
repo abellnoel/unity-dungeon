@@ -6,10 +6,13 @@ using UnityEngine.SceneManagement;
 public class NewSceneTransition : MonoBehaviour
 {
     public string sceneToLoad;
+    public Vector2 playerPosition;
+    public VectorValue playerStorage;
 
     public void OnTriggerEnter2D(Collider2D other) {
         if(other.CompareTag("Player") && !other.isTrigger){
-            SceneManager.LoadScene("TurnBasedPractice");
+            playerStorage.initialValue = playerPosition;
+            SceneManager.LoadScene(sceneToLoad);
         }
     }
     // Start is called before the first frame update

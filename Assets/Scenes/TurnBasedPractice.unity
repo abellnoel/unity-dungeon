@@ -2892,7 +2892,7 @@ PrefabInstance:
         type: 3}
       propertyPath: transition
       value: 
-      objectReference: {fileID: 2103667455}
+      objectReference: {fileID: 1617650824}
     - target: {fileID: 1467888136456301912, guid: d769cad2d7753184e934cc005a198cbb,
         type: 3}
       propertyPath: m_IsActive
@@ -2912,6 +2912,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SceneLoader
+      objectReference: {fileID: 0}
+    - target: {fileID: 1467888137373002617, guid: d769cad2d7753184e934cc005a198cbb,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1467888137373002622, guid: d769cad2d7753184e934cc005a198cbb,
         type: 3}

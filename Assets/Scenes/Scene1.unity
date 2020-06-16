@@ -8641,6 +8641,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1042795123}
   m_CullTransparentMesh: 0
+--- !u!95 &1111091929 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1467888136456301917, guid: d769cad2d7753184e934cc005a198cbb,
+    type: 3}
+  m_PrefabInstance: {fileID: 1753576973}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1129181032
 GameObject:
   m_ObjectHideFlags: 0
@@ -8681,6 +8687,7 @@ MonoBehaviour:
   rb: {fileID: 1129181034}
   moveSpeed: 10
   animator: {fileID: 1129181039}
+  startingPosition: {fileID: 11400000, guid: 03b5f2bf8ba5745489b34404998cc564, type: 2}
 --- !u!50 &1129181034
 Rigidbody2D:
   serializedVersion: 4
@@ -23956,7 +23963,7 @@ PrefabInstance:
         type: 3}
       propertyPath: transition
       value: 
-      objectReference: {fileID: 1753576974}
+      objectReference: {fileID: 1111091929}
     - target: {fileID: 1467888136456301912, guid: d769cad2d7753184e934cc005a198cbb,
         type: 3}
       propertyPath: m_IsActive
@@ -23976,6 +23983,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: SceneLoader
+      objectReference: {fileID: 0}
+    - target: {fileID: 1467888137373002617, guid: d769cad2d7753184e934cc005a198cbb,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1467888137373002622, guid: d769cad2d7753184e934cc005a198cbb,
         type: 3}
@@ -24034,12 +24046,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d769cad2d7753184e934cc005a198cbb, type: 3}
---- !u!95 &1753576974 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 1467888136456301917, guid: d769cad2d7753184e934cc005a198cbb,
-    type: 3}
-  m_PrefabInstance: {fileID: 1753576973}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1781906497
 GameObject:
   m_ObjectHideFlags: 0
@@ -28241,10 +28247,26 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2414594665335407378, guid: 5f667a4a0798f19449cfb41270815129,
+        type: 3}
+      propertyPath: playerStorage
+      value: 
+      objectReference: {fileID: 11400000, guid: 03b5f2bf8ba5745489b34404998cc564,
+        type: 2}
+    - target: {fileID: 2414594665335407378, guid: 5f667a4a0798f19449cfb41270815129,
+        type: 3}
+      propertyPath: playerPosition.x
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2414594665335407378, guid: 5f667a4a0798f19449cfb41270815129,
+        type: 3}
+      propertyPath: playerPosition.y
+      value: 21
+      objectReference: {fileID: 0}
     - target: {fileID: 6514541550659599309, guid: 5f667a4a0798f19449cfb41270815129,
         type: 3}
       propertyPath: m_Name
-      value: BadGuy1
+      value: VietcongLoyalist
       objectReference: {fileID: 0}
     - target: {fileID: 6514541550659599313, guid: 5f667a4a0798f19449cfb41270815129,
         type: 3}
@@ -28306,5 +28328,6 @@ PrefabInstance:
       propertyPath: m_IsTrigger
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6514541550659599314, guid: 5f667a4a0798f19449cfb41270815129, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 5f667a4a0798f19449cfb41270815129, type: 3}

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public enum BattleState { START, PLAYERTURN, ENEMYTURN, WON, LOST }
 
@@ -110,6 +111,10 @@ public class BattleSystem : MonoBehaviour
     void EndBattle(){
         if(state == BattleState.WON){
             dialogText.text = "You emerge victorious!";
+            SceneManager.LoadScene("Scene1");
+            //Destroy(enemyPrefab); I wnat to be able to get back 
+            //to where the character was in the overworld and 
+            //Destroy the enemy that took me to the turn based
         }
         else if(state == BattleState.LOST){
             dialogText.text = "Death has won this day...";
