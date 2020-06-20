@@ -15,7 +15,7 @@ TagManager:
   - 
   - 
   - Enemies
-  - 
+  - Player
   - 
   - 
   - 
@@ -47,6 +47,9 @@ TagManager:
     locked: 0
   - name: Collision
     uniqueID: 908807503
+    locked: 0
+  - name: Foreground
+    uniqueID: 210381315
     locked: 0
   - name: BadGuy1
     uniqueID: 200117511
