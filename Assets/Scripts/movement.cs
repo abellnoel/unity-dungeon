@@ -2,17 +2,26 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum PlayerState{
+    walk,
+    attack,
+    interact
+}
 public class movement : MonoBehaviour
 {
+    public PlayerState currentState; //can add a state machine to this later
     //variables
     public Rigidbody2D rb; 
     public float moveSpeed = 5f;
     public Animator animator;
     private Vector2 move;
+    private Vector3 change;
     private float lastDirection = 1;
     public VectorValue startingPosition;
 
     void Start() {
+        currentState = PlayerState.walk;
+        rb = GetComponent<Rigidbody2D>();
         transform.position = startingPosition.initialValue;
     }
     // Update is called once per frame
@@ -27,7 +36,13 @@ public class movement : MonoBehaviour
             lastDirection = move.x;
         animator.SetFloat("lastDirection", lastDirection);
         animator.SetFloat("isMoving", move.sqrMagnitude); //not entirely sure how this works
-
+         
+         if(Input.GetButtonDown("attack") && currentState != PlayerState.attack){
+             StartCoroutine(AttackCo());
+         }
+         //else if(currentState == PlayerState.walk){
+             //update animation and move
+         //}
     }
 
     // Called once per fixed amount of time, more consistent for physics
@@ -38,6 +53,15 @@ public class movement : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collider) {
         Debug.Log("Worked");
+    }
+
+    private IEnumerator AttackCo(){
+        //animator.SetBool("attacking", true); 
+        currentState = PlayerState.attack;
+        yield return null;
+        //animator.SetBool("attacking", false);
+        yield return new WaitForSeconds(.3f);
+        currentState = PlayerState.walk;
     }
 }
 
