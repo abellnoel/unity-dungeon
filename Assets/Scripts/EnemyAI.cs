@@ -2,8 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum EnemyState{
+    idle,
+    walk,
+    attack,
+    stagger
+}
+
 public class EnemyAI : MonoBehaviour //AI for every enemy
 {
+    public EnemyState currentState;
     public int health;
     public float moveSpeed;
     public string enemyName;

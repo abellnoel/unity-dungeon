@@ -18760,7 +18760,7 @@ GameObject:
   - component: {fileID: 896544313}
   m_Layer: 0
   m_Name: Log
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -18820,8 +18820,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 200117511
-  m_SortingLayer: 3
+  m_SortingLayerID: -219815111
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: -5034061168752090764, guid: 924b3e551145e9d42a6da8aa9069ea07,
     type: 3}
@@ -18883,7 +18883,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 896544307}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -18893,7 +18893,7 @@ Rigidbody2D:
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
-  m_SleepingMode: 1
+  m_SleepingMode: 0
   m_CollisionDetection: 0
   m_Constraints: 4
 --- !u!114 &896544313
@@ -18908,14 +18908,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62ad4f9d06bad314191e3b863e75ad58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentState: 0
   health: 2
-  moveSpeed: 2
+  moveSpeed: 5
   enemyName: Log of Logarithms
   baseAttack: 1
   target: {fileID: 0}
   chaseRadius: 4
-  attackRadius: 1.5
+  attackRadius: 1.8
   homePosition: {fileID: 0}
+  animator: {fileID: 896544308}
 --- !u!1001 &932308756
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19158,6 +19160,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1042795123}
   m_CullTransparentMesh: 0
+--- !u!1 &1080339924 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2734633385205231842, guid: 3745bbc434b82004f9b4d0fcc4106c77,
+    type: 3}
+  m_PrefabInstance: {fileID: 2734633386333773706}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1080339935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1080339924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6924cc6a71c72e54fb8be7d6b2b2b61f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thrust: 5
+  knockTime: 0.04
 --- !u!95 &1111091929 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 1467888136456301917, guid: d769cad2d7753184e934cc005a198cbb,
@@ -39412,6 +39434,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2734633384997456587, guid: 3745bbc434b82004f9b4d0fcc4106c77,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2734633385205231842, guid: 3745bbc434b82004f9b4d0fcc4106c77,
         type: 3}
       propertyPath: m_Name
@@ -39485,6 +39512,11 @@ PrefabInstance:
     - target: {fileID: 2734633385205231846, guid: 3745bbc434b82004f9b4d0fcc4106c77,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2734633385205231865, guid: 3745bbc434b82004f9b4d0fcc4106c77,
+        type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
